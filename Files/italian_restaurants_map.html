@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f56f5e9b4279483d48cb73245d37f76d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+         <div style="position: fixed; 
+                     bottom: 30px; left: 30px; width: 150px; height: 130px; 
+                     background-color: white; border:2px solid grey; z-index:9999; font-size:14px; padding:10px;">
+             <b>Price Range</b><br>
+             <i style="background-color:#b7f270; width:18px; height:18px; display:inline-block; margin-right:5px;"></i> €<br>
+             <i style="background-color:#36a6d9; width:18px; height:18px; display:inline-block; margin-right:5px;"></i> €€<br>
+             <i style="background-color:#f0932e; width:18px; height:18px; display:inline-block; margin-right:5px;"></i> €€€<br>
+             <i style="background-color:#cd3b27; width:18px; height:18px; display:inline-block; margin-right:5px;"></i> €€€€<br>
+         </div>
+    
+    
+            <div class="folium-map" id="map_f56f5e9b4279483d48cb73245d37f76d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f56f5e9b4279483d48cb73245d37f76d = L.map(
+                "map_f56f5e9b4279483d48cb73245d37f76d",
+                {
+                    center: [41.8719, 12.5674],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b69e213137d9055d67d98cfc8684a5d2 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_b69e213137d9055d67d98cfc8684a5d2.addTo(map_f56f5e9b4279483d48cb73245d37f76d);
+        
+    
+            var marker_c177c1b6aa12e78d33db15ffbccae05a = L.marker(
+                [45.9118991, 8.61896],
+                {}
+            ).addTo(map_f56f5e9b4279483d48cb73245d37f76d);
+        
+    
+            var icon_21c93600f510e685d196f88332226a9d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c177c1b6aa12e78d33db15ffbccae05a.setIcon(icon_21c93600f510e685d196f88332226a9d);
+        
+    
+        var popup_f8948049e0f752d8161e1473b5919327 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_43644382005a069d0b40b1f0ade60881 = $(`<div id="html_43644382005a069d0b40b1f0ade60881" style="width: 100.0%; height: 100.0%;"><b>La Tavola</b>---<i>City: Laveno</i></div>`)[0];
+                popup_f8948049e0f752d8161e1473b5919327.setContent(html_43644382005a069d0b40b1f0ade60881);
+            
+        
+
+        marker_c177c1b6aa12e78d33db15ffbccae05a.bindPopup(popup_f8948049e0f752d8161e1473b5919327)
+        ;
+
+        
+    
+    
+            var marker_26d26172a461699d0a02b2856d7cfa01 = L.marker(
+                [45.0773563, 9.2950171],
+                {}
+            ).addTo(map_f56f5e9b4279483d48cb73245d37f76d);
+        
+    
+            var icon_b7e4322be08459d0efcefccc329fe53c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_26d26172a461699d0a02b2856d7cfa01.setIcon(icon_b7e4322be08459d0efcefccc329fe53c);
+        
+    
+        var popup_2c8405944ee16a1007e5f469d570caac = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_208ed925b44e3228223267ab3cac3b39 = $(`<div id="html_208ed925b44e3228223267ab3cac3b39" style="width: 100.0%; height: 100.0%;"><b>GioEle</b>---<i>City: Stradella</i></div>`)[0];
+                popup_2c8405944ee16a1007e5f469d570caac.setContent(html_208ed925b44e3228223267ab3cac3b39);
+            
+        
+
+        marker_26d26172a461699d0a02b2856d7cfa01.bindPopup(popup_2c8405944ee16a1007e5f469d570caac)
+        ;
+
+        
+    
+    
+            var marker_68ebec28149b42937131affb739e7f7e = L.marker(
+                [43.7697955, 11.2556404],
+                {}
+            ).addTo(map_f56f5e9b4279483d48cb73245d37f76d);
+        
+    
+            var icon_308a5c07198ffbbcb63e29843ebbc078 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_68ebec28149b42937131affb739e7f7e.setIcon(icon_308a5c07198ffbbcb63e29843ebbc078);
+        
+    
+        var popup_6c5868267aa20f3eb05fc450ff938265 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c7973f9608f6444f13cf1fe591e9b289 = $(`<div id="html_c7973f9608f6444f13cf1fe591e9b289" style="width: 100.0%; height: 100.0%;"><b>Nugolo</b>---<i>City: Florence</i></div>`)[0];
+                popup_6c5868267aa20f3eb05fc450ff938265.setContent(html_c7973f9608f6444f13cf1fe591e9b289);
+            
+        
+
+        marker_68ebec28149b42937131affb739e7f7e.bindPopup(popup_6c5868267aa20f3eb05fc450ff938265)
+        ;
+
+        
+    
+    
+            var marker_5bef70770291f38be06a436e63a6169b = L.marker(
+                [45.9181327, 10.8860953],
+                {}
+            ).addTo(map_f56f5e9b4279483d48cb73245d37f76d);
+        
+    
+            var icon_ffc0e9b327080c1ec96dbb9962ebce65 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5bef70770291f38be06a436e63a6169b.setIcon(icon_ffc0e9b327080c1ec96dbb9962ebce65);
+        
+    
+        var popup_348f22caa0a88aee064c08edf0b62569 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d7079204ad9500e4eb06858e3c40fa02 = $(`<div id="html_d7079204ad9500e4eb06858e3c40fa02" style="width: 100.0%; height: 100.0%;"><b>Peter Brunel Ristorante Gourmet</b>---<i>City: Arco</i></div>`)[0];
+                popup_348f22caa0a88aee064c08edf0b62569.setContent(html_d7079204ad9500e4eb06858e3c40fa02);
+            
+        
+
+        marker_5bef70770291f38be06a436e63a6169b.bindPopup(popup_348f22caa0a88aee064c08edf0b62569)
+        ;
+
+        
+    
+    
+            var marker_4bb09550d1ac6281756832f4d36f8f6a = L.marker(
+                [45.0141141, 9.1235778],
+                {}
+            ).addTo(map_f56f5e9b4279483d48cb73245d37f76d);
+        
+    
+            var icon_60f0597fbacdeeb78786e4c35016fa77 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_4bb09550d1ac6281756832f4d36f8f6a.setIcon(icon_60f0597fbacdeeb78786e4c35016fa77);
+        
+    
+        var popup_32d8267a7b61b3abe67bd335c525b432 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_153fdf26a7761c9685f6e8323aa11331 = $(`<div id="html_153fdf26a7761c9685f6e8323aa11331" style="width: 100.0%; height: 100.0%;"><b>Hosteria La Cave Cantù</b>---<i>City: Casteggio</i></div>`)[0];
+                popup_32d8267a7b61b3abe67bd335c525b432.setContent(html_153fdf26a7761c9685f6e8323aa11331);
+            
+        
+
+        marker_4bb09550d1ac6281756832f4d36f8f6a.bindPopup(popup_32d8267a7b61b3abe67bd335c525b432)
+        ;
+
+        
+    
+    
+            tile_layer_b69e213137d9055d67d98cfc8684a5d2.addTo(map_f56f5e9b4279483d48cb73245d37f76d);
+        
+</script>
+</html>
